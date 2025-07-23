@@ -36,7 +36,7 @@ module.exports = {
         const pages = categories.map((cat, idx) => {
             return new EmbedBuilder()
                 .setTitle("Help Menu")
-                .setDescription(`📌 **Use the buttons below to navigate!**\n\n__**${cat.toUpperCase()} COMMANDS -**__\n\n` +
+                .setDescription(`<a:info:1115209833218588722:> **Use the buttons below to navigate!**\n\n__**${cat.toUpperCase()} COMMANDS -**__\n\n` +
                     commands[idx].map(cmd => `**/${cmd.name}**\n${cmd.description}`).join('\n\n')
                 )
                 .setColor("#2f3136")
@@ -45,7 +45,7 @@ module.exports = {
 
         let page = 0;
         const getPageEmbed = (pageIndex) => {
-            return pages[pageIndex].setFooter({ text: `Page ${pageIndex + 1}/${pages.length} • Support: https://cwkbot.fun/discord` });
+            return pages[pageIndex].setFooter({ text: `Page ${pageIndex + 1}/${pages.length} • Support: https://youtube.com/c/BeluTroll` });
         };
 
         // Buttons
@@ -62,7 +62,7 @@ module.exports = {
 
         collector.on('collect', async i => {
             if (i.user.id !== interaction.user.id) {
-                return i.reply({ content: "❌ You can't control this menu!", ephemeral: true });
+                return i.reply({ content: "<a:Wrong:1017416697168269372:> You can't control this menu!", ephemeral: true });
             }
 
             if (i.customId === 'first') page = 0;
