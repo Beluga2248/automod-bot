@@ -14,7 +14,7 @@ module.exports = {
     const result = await Warn.findOneAndDelete({ userId: user.id, guildId: interaction.guild.id });
 
     const embed = new EmbedBuilder()
-      .setTitle('🧹 Warnings Cleared')
+      .setTitle('<a:Yes:1011614293420150805:> Warnings Cleared')
       .setDescription(result ? `Cleared all warnings for ${user.tag}` : `No warnings to clear for ${user.tag}`)
       .setColor('Green')
       .setTimestamp();
@@ -22,7 +22,7 @@ module.exports = {
     await interaction.reply({ embeds: [embed] });
 
     await logToChannel(interaction.guild, {
-      title: '🧹 Warnings Cleared',
+      title: '<a:Yes:1011614293420150805:> Warnings Cleared',
       fields: [
         { name: 'User', value: `<@${user.id}>`, inline: true },
         { name: 'Moderator', value: `<@${interaction.user.id}>`, inline: true }
