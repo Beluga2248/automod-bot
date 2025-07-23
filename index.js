@@ -91,17 +91,6 @@ if (fs.existsSync(eventsPath)) {
     }
   }
 }
-
-// KeepAlive server for Replit
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Bot is alive!');
-});
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`[+] KeepAlive server running on port ${PORT}`);
-});
-
 // Error catcher
 process.on('unhandledRejection', error => {
   console.error('Unhandled promise rejection:', error);
