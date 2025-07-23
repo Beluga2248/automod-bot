@@ -14,12 +14,12 @@ module.exports = {
                 .addChoices(
                     { name: 'Playing', value: 'PLAYING' },
                     { name: 'Watching', value: 'WATCHING' },
-                    { name: 'Listening', value: 'LISTENING' }
+                    { name: 'Streaming', value: 'STREAMING' }
                 )
                 .setRequired(true)),
 
     async execute(interaction) {
-        if (interaction.user.id !== '682981714523586606') return interaction.reply({ content: '❌ Not authorized.', ephemeral: true });
+        if (interaction.user.id !== '951332179357614110') return interaction.reply({ content: '❌ Not authorized.', ephemeral: true });
 
         const activity = interaction.options.getString('activity');
         const type = interaction.options.getString('type');
