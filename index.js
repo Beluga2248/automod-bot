@@ -34,8 +34,8 @@ fs.readdirSync(commandsPath).forEach(dir => {
 client.once('ready', () => {
   console.log(`✅ Bot ready as ${client.user.tag}`);
   client.user.setPresence({
-    activities: [{ name: 'your server 👀', type: 3 }],
-    status: 'online'
+    activities: [{ name: 'With Beluga2248 and Ur Server', type: 3 }],
+    status: 'streaming'
   });
 });
 
