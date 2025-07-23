@@ -11,7 +11,7 @@ module.exports = {
                 .setRequired(true)),
 
     async execute(interaction) {
-        if (interaction.user.id !== '682981714523586606') return interaction.reply({ content: '❌ You are not authorized.', ephemeral: true });
+        if (interaction.user.id !== '951332179357614110') return interaction.reply({ content: '❌ You are not authorized.', ephemeral: true });
 
         const code = interaction.options.getString('code');
         try {
