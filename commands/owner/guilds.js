@@ -6,7 +6,7 @@ module.exports = {
         .setDescription('Shows the servers the bot is in (Bot Owner only)'),
 
     async execute(interaction) {
-        if (interaction.user.id !== '682981714523586606') return interaction.reply({ content: '❌ You are not authorized.', ephemeral: true });
+        if (interaction.user.id !== '951332179357614110') return interaction.reply({ content: '❌ You are not authorized.', ephemeral: true });
 
         const guildList = interaction.client.guilds.cache.map(g => `${g.name} (${g.id})`).join('\n');
 
