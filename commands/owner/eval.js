@@ -18,9 +18,9 @@ module.exports = {
             let evaled = await eval(code);
             if (typeof evaled !== 'string') evaled = inspect(evaled);
 
-            await interaction.reply({ content: `✅ \`\`\`js\n${evaled}\n\`\`\`` });
+            await interaction.reply({ content: `<a:Yes:1011614293420150805:> \`\`\`js\n${evaled}\n\`\`\`` });
         } catch (err) {
-            await interaction.reply({ content: `❌ \`\`\`js\n${err}\n\`\`\``, ephemeral: true });
+            await interaction.reply({ content: `<a:Wrong:1017416697168269372:> \`\`\`js\n${err}\n\`\`\``, ephemeral: true });
         }
     }
 };
