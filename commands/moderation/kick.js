@@ -22,7 +22,7 @@ module.exports = {
     await member.kick(reason);
 
     const embed = new EmbedBuilder()
-      .setTitle('👢 Member Kicked')
+      .setTitle('<a:Yes:1011614293420150805:> Member Kicked')
       .setDescription(`${member.user.tag} was kicked.`)
       .addFields({ name: 'Reason', value: reason })
       .setColor('Orange')
@@ -31,13 +31,13 @@ module.exports = {
     await interaction.reply({ embeds: [embed] });
 
     await logToChannel(interaction.guild, {
-      title: '👢 User Kicked',
+      title: '<a:Moderation:1115208500172292127:> User Kicked',
       fields: [
         { name: 'User', value: `<@${member.id}>`, inline: true },
         { name: 'Moderator', value: `<@${interaction.user.id}>`, inline: true },
         { name: 'Reason', value: reason }
       ],
-      color: 'Orange'
+      color: 'Red'
     });
   }
 };
