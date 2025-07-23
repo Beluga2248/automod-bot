@@ -14,14 +14,14 @@ module.exports = {
     const member = interaction.guild.members.cache.get(user.id);
 
     const embed = new EmbedBuilder()
-      .setTitle(`👤 User Info: ${user.tag}`)
+      .setTitle(`<a:info:1115209833218588722:> User Info: ${user.tag}`)
       .setThumbnail(user.displayAvatarURL({ dynamic: true }))
       .setColor('Orange')
       .addFields(
-        { name: 'User ID', value: user.id, inline: true },
-        { name: 'Account Created', value: `<t:${Math.floor(user.createdTimestamp / 1000)}:F>`, inline: true },
-        { name: 'Joined Server', value: `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`, inline: true },
-        { name: 'Roles', value: `${member.roles.cache.map(r => r).join(', ')}`, inline: false }
+        { name: '<a:info:1115209833218588722:> User ID', value: user.id, inline: true },
+        { name: '<a:info:1115209833218588722:> Account Created', value: `<t:${Math.floor(user.createdTimestamp / 1000)}:F>`, inline: true },
+        { name: '<a:info:1115209833218588722:> Joined Server', value: `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`, inline: true },
+        { name: '<a:info:1115209833218588722:> Roles', value: `${member.roles.cache.map(r => r).join(', ')}`, inline: false }
       );
 
     await interaction.reply({ embeds: [embed] });
