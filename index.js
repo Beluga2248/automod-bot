@@ -3,7 +3,6 @@ const { Client, GatewayIntentBits, Collection, Partials, EmbedBuilder } = requir
 const fs = require('fs');
 const mongoose = require('mongoose');
 const path = require('path');
-const express = require('express');
 const deploy = require ('./deploy-commands.js')
 const client = new Client({
   intents: [
