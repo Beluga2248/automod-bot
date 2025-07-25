@@ -18,13 +18,13 @@ module.exports = {
         const command = interaction.client.commands.get(commandName);
 
         if (!command) {
-            return interaction.reply({ content: `</Wrong:1017416697168269372> Command \`${commandName}\` not found.`, ephemeral: true });
+            return interaction.reply({ content: `<a:Wrong:1017416697168269372> Command \`${commandName}\` not found.`, ephemeral: true });
         }
 
         const commandFoldersPath = path.join(__dirname, '../');
         const folder = fs.readdirSync(commandFoldersPath).find(folder => fs.existsSync(`${commandFoldersPath}/${folder}/${commandName}.js`));
 
-        if (!folder) return interaction.reply({ content: '</Wrong:1017416697168269372> Command file not found.', ephemeral: true });
+        if (!folder) return interaction.reply({ content: '<a:Wrong:1017416697168269372> Command file not found.', ephemeral: true });
 
         delete require.cache[require.resolve(`../${folder}/${commandName}.js`)];
 
