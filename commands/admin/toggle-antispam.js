@@ -16,7 +16,7 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setTitle('Anti-Spam Toggled')
-      .setDescription(`Anti-spam protection is now **${settings.antiSpam ? 'enabled </Yes:1011614293420150805>' : 'disabled </Wrong:1017416697168269372>'}**.`)
+      .setDescription(`Anti-spam protection is now **${settings.antiSpam ? 'enabled <a:Yes:1011614293420150805>' : 'disabled <a:Wrong:1017416697168269372>'}**.`)
       .setColor(settings.antiSpam ? 'Green' : 'Red');
 
     await interaction.reply({ embeds: [embed], ephemeral: true });
