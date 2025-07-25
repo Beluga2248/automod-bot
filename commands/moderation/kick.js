@@ -22,7 +22,7 @@ module.exports = {
     await member.kick(reason);
 
     const embed = new EmbedBuilder()
-      .setTitle('<a:Yes:1011614293420150805:> Member Kicked')
+      .setTitle('</Yes:1011614293420150805> Member Kicked')
       .setDescription(`${member.user.tag} was kicked.`)
       .addFields({ name: 'Reason', value: reason })
       .setColor('Orange')
