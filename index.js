@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, Collection, Partials, EmbedBuilder } = require('discord.js');
 const fs = require('fs');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const path = require('path');
 const deploy = require ('./deploy-commands.js')
 const client = new Client({
@@ -66,15 +66,15 @@ client.on('interactionCreate', async interaction => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
+//mongoose.connect(process.env.MONGO_URI, {
  // useNewUrlParser: true,
   //useUnifiedTopology: true,
-}).then(() => {
-  console.log('✅ Connected to MongoDB');
+//}).then(() => {
+//  console.log('✅ Connected to MongoDB');
   client.login(process.env.DISCORD_TOKEN);
-}).catch(err => {
-  console.error('❌ MongoDB connection error:', err);
-});
+//}).catch(err => {
+//  console.error('❌ MongoDB connection error:', err);
+//});
 
 // Event loader
 const eventsPath = path.join(__dirname, 'events');
