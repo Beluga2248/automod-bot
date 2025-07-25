@@ -16,7 +16,7 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setTitle('Anti-Link Toggled')
-      .setDescription(`Anti-link protection is now **${settings.antiLink ? 'enabled </Yes:1011614293420150805>' : 'disabled </Wrong:1017416697168269372>'}**.`)
+      .setDescription(`Anti-link protection is now **${settings.antiLink ? 'enabled <a:Yes:1011614293420150805>' : 'disabled <a:Wrong:1017416697168269372>'}**.`)
       .setColor(settings.antiLink ? 'Green' : 'Red');
 
     await interaction.reply({ embeds: [embed], ephemeral: true });
