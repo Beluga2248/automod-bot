@@ -25,10 +25,10 @@ module.exports = {
       .setThumbnail(emoji.url)
       .setColor('Yellow')
       .addFields(
-        { name: '<a:info:1115209833218588722:> ID', value: emoji.id, inline: true },
-        { name: '<a:info:1115209833218588722:> Animated', value: emoji.animated ? 'Yes' : 'No', inline: true },
-        { name: '<a:info:1115209833218588722:> Created', value: `<t:${Math.floor(emoji.createdTimestamp / 1000)}:F>`, inline: true },
-        { name: '<a:info:1115209833218588722:> URL', value: `[Link](${emoji.url})`, inline: false }
+        { name: '<a:info:1115209833218588722> ID', value: emoji.id, inline: true },
+        { name: '<a:info:1115209833218588722> Animated', value: emoji.animated ? 'Yes' : 'No', inline: true },
+        { name: '<a:info:1115209833218588722> Created', value: `<t:${Math.floor(emoji.createdTimestamp / 1000)}:F>`, inline: true },
+        { name: '<a:info:1115209833218588722> URL', value: `[Link](${emoji.url})`, inline: false }
       );
 
     await interaction.reply({ embeds: [embed] });
