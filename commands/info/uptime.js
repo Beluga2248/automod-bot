@@ -12,6 +12,6 @@ module.exports = {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = totalSeconds % 60;
 
-    await interaction.reply(`</Ping:1117771146071375973> Uptime: \`${days}d ${hours}h ${minutes}m ${seconds}s\``);
+    await interaction.reply(`<a:Ping:1117771146071375973> Uptime: \`${days}d ${hours}h ${minutes}m ${seconds}s\``);
   }
 };
