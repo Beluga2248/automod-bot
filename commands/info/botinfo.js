@@ -12,16 +12,16 @@ module.exports = {
       .setTitle('🤖 Bot Information')
       .setColor('Blurple')
       .addFields(
-        { name: '</info:1115209833218588722> Name', value: client.user.username, inline: true },
-        { name: '</info:1115209833218588722> Tag', value: client.user.discriminator, inline: true },
-        { name: '</Ping:1117771146071375973> Ping', value: `${client.ws.ping}ms`, inline: true },
-        { name: '</Ping:1117771146071375973> Uptime', value: `<t:${Math.floor((Date.now() - client.uptime) / 1000)}:R>`, inline: true },
-        { name: '</Ping:1117771146071375973> Servers', value: `${client.guilds.cache.size}`, inline: true },
-        { name: '</Coder:1115208455578472528> Users', value: `${client.users.cache.size}`, inline: true },
-        { name: '</Coder:1115208455578472528> Node.js', value: `${process.version}`, inline: true },
-        { name: '</info:1115209833218588722> Platform', value: `${os.platform()} (${os.arch()})`, inline: true },
-        { name: '</info:1115209833218588722> RAM Usage', value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, inline: true },
-        { name: '</info:1115209833218588722> Version', value: `v${packageJson.version}`, inline: true }
+        { name: '<a:info:1115209833218588722> Name', value: client.user.username, inline: true },
+        { name: '<a:info:1115209833218588722> Tag', value: client.user.discriminator, inline: true },
+        { name: '<a:Ping:1117771146071375973> Ping', value: `${client.ws.ping}ms`, inline: true },
+        { name: '<a:Ping:1117771146071375973> Uptime', value: `<t:${Math.floor((Date.now() - client.uptime) / 1000)}:R>`, inline: true },
+        { name: '<a:Ping:1117771146071375973> Servers', value: `${client.guilds.cache.size}`, inline: true },
+        { name: '<a:Coder:1115208455578472528> Users', value: `${client.users.cache.size}`, inline: true },
+        { name: '<a:Coder:1115208455578472528> Node.js', value: `${process.version}`, inline: true },
+        { name: '<a:info:1115209833218588722> Platform', value: `${os.platform()} (${os.arch()})`, inline: true },
+        { name: '<a:info:1115209833218588722> RAM Usage', value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, inline: true },
+        { name: '<a:info:1115209833218588722> Version', value: `v${packageJson.version}`, inline: true }
       )
       .setFooter({ text: `Made by ${packageJson.author}` });
 
