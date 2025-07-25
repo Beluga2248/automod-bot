@@ -72,6 +72,17 @@ client.on('interactionCreate', async interaction => {
 //}).then(() => {
 //  console.log('✅ Connected to MongoDB');
   client.login(process.env.DISCORD_TOKEN);
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  console.log('AntiCrash Activated ✅');
+  // Additional logging or error handling can be added here
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  console.log('AntiCrash Activated✅');
+  // Additional logging or error handling can be added here
+});
 //}).catch(err => {
 //  console.error('❌ MongoDB connection error:', err);
 //});
