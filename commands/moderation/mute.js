@@ -23,7 +23,7 @@ module.exports = {
     try {
       await member.timeout(10 * 60 * 1000, reason); // 10 minutes timeout
       const embed = new EmbedBuilder()
-        .setTitle('</Moderation:1115208500172292127> Member Muted')
+        .setTitle('<:Moderation:1115208500172292127> Member Muted')
         .setColor('Orange')
         .addFields(
           { name: 'User', value: `${member.user.tag}`, inline: true },
@@ -36,7 +36,7 @@ module.exports = {
       await interaction.reply({ embeds: [embed] });
     } catch (err) {
       console.error(err);
-      interaction.reply({ content: '</Wrong:1017416697168269372> Failed to mute the user.', ephemeral: true });
+      interaction.reply({ content: '<a:Wrong:1017416697168269372> Failed to mute the user.', ephemeral: true });
     }
   }
 };
