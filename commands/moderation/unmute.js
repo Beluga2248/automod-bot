@@ -18,7 +18,7 @@ module.exports = {
     try {
       await member.timeout(null); // Remove timeout
       const embed = new EmbedBuilder()
-        .setTitle('</Yes:1011614293420150805> Member Unmuted')
+        .setTitle('<a:Yes:1011614293420150805> Member Unmuted')
         .setColor('Green')
         .addFields(
           { name: 'User', value: `${member.user.tag}`, inline: true },
@@ -29,7 +29,7 @@ module.exports = {
       await interaction.reply({ embeds: [embed] });
     } catch (err) {
       console.error(err);
-      interaction.reply({ content: '</Wrong:1017416697168269372> Failed to unmute the user.', ephemeral: true });
+      interaction.reply({ content: '<a:Wrong:1017416697168269372> Failed to unmute the user.', ephemeral: true });
     }
   }
 };
