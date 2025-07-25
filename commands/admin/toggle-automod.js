@@ -18,7 +18,7 @@ module.exports = {
     settings.automodEnabled = !settings.automodEnabled;
     await settings.save();
 
-    const status = settings.automodEnabled ? 'enabled </Yes:1011614293420150805>' : 'disabled </Wrong:1017416697168269372>';
+    const status = settings.automodEnabled ? 'enabled <a:Yes:1011614293420150805>' : 'disabled <a:Wrong:1017416697168269372>';
     const embed = new EmbedBuilder()
       .setTitle('Automod Toggled')
       .setDescription(`Automod is now **${status}**.`)
