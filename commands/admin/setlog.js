@@ -18,7 +18,7 @@ module.exports = {
     await settings.save();
 
     const embed = new EmbedBuilder()
-      .setTitle('<a:Yes:1011614293420150805:> Log Channel Set')
+      .setTitle('</Yes:1011614293420150805> Log Channel Set')
       .setDescription(`Logging will now go to ${channel}`)
       .setColor('Green');
 
