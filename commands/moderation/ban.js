@@ -19,7 +19,7 @@ module.exports = {
       await interaction.guild.members.ban(user.id, { reason });
 
       const embed = new EmbedBuilder()
-        .setTitle('<a:ban:1017416834611412993:> Member Banned')
+        .setTitle('</ban:1017416834611412993> Member Banned')
         .setDescription(`${user.tag} has been banned.`)
         .addFields({ name: 'Reason', value: reason })
         .setColor('Red')
@@ -28,7 +28,7 @@ module.exports = {
       await interaction.reply({ embeds: [embed] });
 
       await logToChannel(interaction.guild, {
-        title: '<a:ban:1017416834611412993:> User Banned',
+        title: '</ban:1017416834611412993> User Banned',
         fields: [
           { name: 'User', value: `<@${user.id}>`, inline: true },
           { name: 'Moderator', value: `<@${interaction.user.id}>`, inline: true },
