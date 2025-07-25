@@ -19,15 +19,15 @@ module.exports = {
     try {
       const messages = await interaction.channel.bulkDelete(amount, true);
       const embed = new EmbedBuilder()
-        .setTitle('<a:Yes:1011614293420150805:> Messages Cleared')
-        .setDescription(`<a:Yes:1011614293420150805:>Successfully deleted ${messages.size} messages.`)
+        .setTitle('</Yes:1011614293420150805> Messages Cleared')
+        .setDescription(`</Yes:1011614293420150805> Successfully deleted ${messages.size} messages.`)
         .setColor('Blue')
         .setTimestamp();
 
       await interaction.reply({ embeds: [embed], ephemeral: true });
     } catch (err) {
       console.error(err);
-      interaction.reply({ content: '<a:Wrong:1017416697168269372:> Failed to delete messages.', ephemeral: true });
+      interaction.reply({ content: '</Wrong:1017416697168269372> Failed to delete messages.', ephemeral: true });
     }
   }
 };
