@@ -15,7 +15,7 @@ module.exports = {
       await settings.save();
     }
 
-    const status = (flag) => flag ? '<a:Yes:1011614293420150805> Enabled' : '<a:Wrong:1017416697168269372:> Disabled';
+    const status = (flag) => flag ? '<a:Yes:1011614293420150805> Enabled' : '<a:Wrong:1017416697168269372> Disabled';
 
     const embed = new EmbedBuilder()
       .setTitle(`<a:Moderation:1115208500172292127> Automod Status for ${interaction.guild.name}`)
